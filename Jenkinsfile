@@ -17,7 +17,7 @@ pipeline {
     }
 
     tools {
-        nodejs 'node20'
+        nodejs 'nodejs20'
     }
 
     stages {
