@@ -1,8 +1,6 @@
 pipeline {
 
-    agent {
-        label 'Jenkins-Agent'  #'jenkins-agent1'
-    }
+    agent any
 
     environment {
         CI = 'false'
