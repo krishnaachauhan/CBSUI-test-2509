@@ -5,7 +5,7 @@ pipeline {
     environment {
         CI = 'false'
         GIT_REPO_URL = 'https://github.com/krishnaachauhan/CBSUI-test-2509.git'
-        GIT_CREDENTIALS = 'krishnaachauhan-PAT'
+        GIT_CREDENTIALS = 'krishnaachauhan'
         KUBECONFIG_ID = 'kubeconfig'
         FILENAME = 'cbs-ui-deploy-service.yaml'
         MICROSERVICE = 'EnfiniteCBS_UI'
