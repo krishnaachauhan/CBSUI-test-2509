@@ -1,23 +1,19 @@
-
-@Library('jenkins-shared-library@main') _
-
 pipeline {
 
     agent {
-        label 'jenkins-agent'
+        label 'any'
     }
 
     environment {
         CI = 'false'
-        GIT_CREDENTIALS = 'jennkins-to-github'
+        GIT_REPO_URL = 'https://github.com/krishnaachauhan/CBSUI-test-2509.git'
+        GIT_CREDENTIALS = 'krishnaachauhan-PAT'
         KUBECONFIG_ID = 'kubeconfig'
-        KUBECONFIG_ID_QAQC = 'kubeconfig-qaqc'
         FILENAME = 'cbs-ui-deploy-service.yaml'
-        FILENAME_QAQC = 'uat-cbs-ui-deploy-service.yaml'
         MICROSERVICE = 'EnfiniteCBS_UI'
-        IMAGE_NAME = 'acuteinformatics2024/enfinitycore-dev'
-        IMAGE_NAME_QAQC = 'acuteinformatics2024/enfinitycore-uat'
-        EMAIL_RECIPIENT = 'is-team@bankaiinformatics.co.in,aipl-devops@bankaiinformatics.co.in,jayendra.sathwara@bankaiinformatics.co.in,sajid.sachawala@bankaiinformatics.co.in,parag.mistri@bankaiinformatics.co.in,pradeep.suthar@bankaiinformatics.co.in,aditya.shah@bankaiinformatics.co.in'
+        BRANCH = 'main'
+        IMAGE_NAME = 'actdocker123/cicdpipeline'
+        EMAIL_RECIPIENT = 'krishna.chauhan@bankaiinformatics.co.in'
     }
 
     tools {
@@ -25,146 +21,130 @@ pipeline {
     }
 
     stages {
-    stage('Cleanup Workspace') {
-        steps {
-            cleanWs()
+        stage('Cleanup Workspace') {
+            steps {
+                cleanWs()
+            }
         }
-    }
 
-    stage('Checkout') {
-        steps {
-            checkout scm
+        stage('Checkout') {
+            steps {
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: "*/${env.BRANCH}"]],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [],
+                    userRemoteConfigs: [[
+                        url: env.GIT_REPO_URL,
+                        credentialsId: env.GIT_CREDENTIALS
+                    ]]
+                ])
+            }
         }
-    }
 
-    stage('Install Dependencies') {
-        steps {
-            sh 'npm install --force'
-            sh 'yarn add cross-env'
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install --force'
+                sh 'yarn add cross-env'
+            }
         }
-    }
 
-    stage('Build') {
-        environment {
-            CI = 'false'
+        stage('Build') {
+            environment {
+                CI = 'false'
+            }
+            steps {
+                sh 'npm run build'
+            }
         }
-        steps {
-            sh 'npm run build'
-        }
-    }
 
-    stage('Archive Artifacts') {
-        steps {
-            archiveArtifacts artifacts: 'build/**', allowEmptyArchive: true
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'build/**', allowEmptyArchive: true
+            }
         }
-    }
 
-    stage('Extract and Increment Image Tag in develop') {
-        when {
-            branch 'develop'
+        stage('Extract and Increment Image Tag') {
+            steps {
+                script {
+                    def latestTag = sh(script: "git tag | grep -Eo '\\d{5}' | sort -nr | head -n1", returnStdout: true).trim()
+                    def newTag = latestTag.isNumber() ? String.format("%05d", latestTag.toInteger() + 1) : "00001"
+                    env.NEW_TAG = newTag
+                    echo "New image tag: ${env.NEW_TAG}"
+                }
+            }
         }
-        steps {
-            extractIncreamentForFiveDigit(env.FILENAME)
-        }
-    }
 
-    stage('Extract and Increment Image Tag in quality') {
-        when {
-            branch 'quality'
+        stage('Build and Push Docker Image') {
+            steps {
+                script {
+                    sh """
+                        docker build -t ${env.IMAGE_NAME}:${env.NEW_TAG} .
+                        echo \$DOCKER_PASSWORD | docker login -u \$DOCKER_USERNAME --password-stdin
+                        docker push ${env.IMAGE_NAME}:${env.NEW_TAG}
+                    """
+                }
+            }
         }
-        steps {
-           extractIncreamentForFiveDigit(env.FILENAME_QAQC)
-        }
-    }
 
-    stage('Build and Push Docker Image To develop branch') {
-        when {
-            branch 'develop'
+        stage('Update Manifest') {
+            steps {
+                script {
+                    sh """
+                        sed -i 's|image:.*|image: ${env.IMAGE_NAME}:${env.NEW_TAG}|' ${env.FILENAME}
+                    """
+                }
+            }
         }
-        steps {
-            buildAndPushDockerImage(env.IMAGE_NAME, env.NEW_TAG)
-        }
-    }
 
-    stage('Build and Push Docker Image To quality branch') {
-        when {
-            branch 'quality'
+        stage('Push Deployment File to Git') {
+            steps {
+                script {
+                    sh """
+                        git config user.name "jenkins"
+                        git config user.email "jenkins@yourdomain.com"
+                        git add ${env.FILENAME}
+                        git commit -m "Update image tag to ${env.NEW_TAG}"
+                        git push https://${env.GIT_CREDENTIALS}@${env.GIT_REPO_URL.replace('https://', '')} HEAD:${env.BRANCH}
+                    """
+                }
+            }
         }
-        steps {
-            buildAndPushDockerImage(env.IMAGE_NAME_QAQC, env.NEW_TAG)
-        }
-    }
 
-    stage('Update Manifest To develop branch') {
-        when {
-            branch 'develop'
-        }
-        steps {
-            updateManifestDeploy(env.FILENAME, env.NEW_TAG, env.IMAGE_NAME)
-        }
-    }
-
-    stage('Update Manifest To quality branch') {
-        when {
-            branch 'quality'
-        }
-        steps {
-            updateManifestDeploy(env.FILENAME_QAQC, env.NEW_TAG, env.IMAGE_NAME_QAQC)
-        }
-    }
-
-    stage('Push Deployment File to develop git branch') {
-        when {
-            branch 'develop'
-        }
-        steps {
-            pushDeploymentFileToGit(env.FILENAME, env.NEW_TAG, env.BRANCH_NAME, env.GIT_CREDENTIALS, env.GIT_URL)
-        }
-    }
-
-    stage('Push Deployment File to quality git branch') {
-        when {
-            branch 'quality'
-        }
-        steps {
-            pushDeploymentFileToGit(env.FILENAME_QAQC, env.NEW_TAG, env.BRANCH_NAME, env.GIT_CREDENTIALS, env.GIT_URL)
-        }
-    }
-
-    stage('Deploy To Kubernetes - DEV') {
-        when {
-            branch 'develop'
-        }
-        steps {
-            deployToKubernetes(env.FILENAME, env.KUBECONFIG_ID)
-        }
-    }
-
-    stage('Deploy To Kubernetes - quality') {
-        when {
-            branch 'quality'
-        }
-        steps {
-            deployToKubernetes(env.FILENAME_QAQC, env.KUBECONFIG_ID_QAQC)
-        }
-    }
-
-            // stage('Trivy Image Scan') {
+        // stage('Deploy To Kubernetes') {
         //     steps {
-        //         sh 'trivy image ${IMAGE_NAME}:${NEW_TAG} --format table -o ${MICROSERVICE}.txt '
+        //         withCredentials([file(credentialsId: env.KUBECONFIG_ID, variable: 'KUBECONFIG')]) {
+        //             sh 'kubectl apply -f ${FILENAME}'
+        //         }
         //     }
         // }
-}
 
-
+        // stage('Trivy Image Scan') {
+        //     steps {
+        //         sh 'trivy image ${IMAGE_NAME}:${NEW_TAG} --format table -o ${MICROSERVICE}.txt'
+        //     }
+        // }
+    }
 
     post {
         success {
-            notification('SUCCESS', env.EMAIL_RECIPIENT)
+            script {
+                emailext(
+                    subject: "✅ Build SUCCESS: ${env.JOB_NAME} [#${env.BUILD_NUMBER}]",
+                    body: "The pipeline completed successfully.\n\nBuild URL: ${env.BUILD_URL}",
+                    to: "${env.EMAIL_RECIPIENT}"
+                )
+            }
         }
+
         failure {
-            notification('FAILURE', env.EMAIL_RECIPIENT)
+            script {
+                emailext(
+                    subject: "❌ Build FAILURE: ${env.JOB_NAME} [#${env.BUILD_NUMBER}]",
+                    body: "The pipeline failed.\n\nBuild URL: ${env.BUILD_URL}",
+                    to: "${env.EMAIL_RECIPIENT}"
+                )
+            }
         }
-    }    
+    }
 }
-    
