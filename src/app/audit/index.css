@@ -1,0 +1,416 @@
+:root {
+  --white: #fff;
+  --red-tab-error: #d32f2f;
+  --red-lighter-tab-error: #d32f2fbb;
+  --green-tab-success: #008000;
+  --green-lighter-tab-success: #008000bb;
+  /* --theme-color1: #07288e;
+  --theme-color2: #ffffff;
+  --theme-color3: #4263c7;
+  --theme-color4: #eceff9;
+  --theme-color5: linear-gradient(71.66deg, #4285f4 -2.97%, #885df5 111.3%);
+  --theme-color6: rgba(148, 149, 151, 1);
+  --theme-color7: #e7e5e563; */
+
+  /* Theme-color 2 */
+  /* --theme-color1: #075f2a;
+  --theme-color2: #ffffff;
+  --theme-color3: #3b694d;
+  --theme-color4: #e8f5e9;
+  --theme-color5: linear-gradient(71.66deg, #3b694d -2.97%, #98d19a 111.3%);
+  --theme-color6: rgba(148, 149, 151, 1); */
+
+  /* Theme-color 3 */
+  /* --theme-color1: #b12e44;
+  --theme-color2: #ffffff;
+  --theme-color3: #c91450;
+  --theme-color4: #fce4ec;
+  --theme-color5: linear-gradient(71.66deg, #b12e44 -2.97%, #fce4ec 111.3%);
+  --theme-color6: rgba(148, 149, 151, 1); */
+
+  /* Theme-color 4 */
+  /* --theme-color1: #882609;
+  --theme-color2: #ffffff;
+  --theme-color3: #ca3b10;
+  --theme-color4: #fff8e1;
+  --theme-color5: linear-gradient(71.66deg, #ca3b10 -2.97%, #fbe9e7 111.3%);
+  --theme-color6: rgba(148, 149, 151, 1); */
+
+  /* Theme-color 5 */
+  /* --theme-color1: #405864;
+  --theme-color2: #ffffff;
+  --theme-color3: #597380;
+  --theme-color4: #eceff1;
+  --theme-color5: linear-gradient(71.66deg, #597380 -2.97%, #eceff1 111.3%);
+  --theme-color6: rgba(148, 149, 151, 1); */
+  /* Theme-color 6 */
+  /* --theme-color1: #0a5da0;
+  --theme-color2: #ffffff;
+  --theme-color3: #2196f3;
+  --theme-color4: #e3f2fd;
+  --theme-color5: linear-gradient(71.66deg, #2196f3 -2.97%, #eceff1 111.3%);
+  --theme-color6: rgba(148, 149, 151, 1); */
+  /* Theme-color 7 */
+  /* --theme-color1: #00006d;
+  --theme-color2: #ffffff;
+  --theme-color3: #00008b;
+  --theme-color4: #e8eaf6;
+  --theme-color5: linear-gradient(71.66deg, #00008b -2.97%, #e8eaf6 111.3%);
+  --theme-color6: rgba(148, 149, 151, 1); */
+
+  /* --white: rgb(255, 255, 255); */
+  --white-dim: rgb(255, 255, 255, 0.54);
+  /* font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important; */
+}
+
+body {
+  margin: 0;
+  /* font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #393939 !important;
+  font-size: 1rem !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.5px !important;
+  background-color: var(--theme-color2) !important;
+}
+body,
+input,
+textarea,
+select,
+/* .MuiInputBase-root,
+.MuiMenuItem-root {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important;
+} */
+html {
+  font-size: 14px;
+}
+.theme-color1 {
+  color: var(--theme-color1);
+}
+.theme-color2 {
+  color: var(--theme-color2);
+}
+.theme-color3 {
+  color: var(--theme-color3);
+}
+.theme-color4 {
+  color: var(--theme-color4);
+}
+.theme-color5 {
+  color: var(--theme-color5);
+}
+*:focus {
+  outline: none !important;
+}
+button:focus {
+  outline: none !important;
+}
+img {
+  max-width: 100%;
+}
+a:hover {
+  text-decoration: none !important;
+  color: var(--theme-color1) !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4 !important;
+  margin: 4px 0;
+  /* font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important; */
+}
+h2 {
+  color: var(--theme-color1);
+  font-weight: 700 !important;
+  font-size: 2rem;
+}
+.text {
+  line-height: 1.4;
+}
+
+.follow-link svg:hover path {
+  fill: var(--theme-color1);
+}
+
+.ps__rail-y {
+  width: 10px;
+  /* height: 0px !important; */
+}
+.ps__rail-y:hover > .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y.ps--clicking .ps__thumb-y {
+  background-color: var(--theme-color1) !important;
+  width: 6px;
+}
+.ps__rail-x {
+  height: 6px;
+}
+.ps__rail-x:hover > .ps__thumb-x,
+.ps__rail-x:focus > .ps__thumb-x,
+.ps__rail-x.ps--clicking .ps__thumb-x {
+  background-color: var(--theme-color1) !important;
+  width: 6px;
+}
+.textInputFromRight > div > input {
+  text-align: right !important;
+}
+.textInputFromCenter > div > input {
+  text-align: center !important;
+}
+.textInputFromRight > input {
+  text-align: right !important;
+}
+.textInputFromCenter > input {
+  text-align: center !important;
+}
+@media screen and (min-width: 1440px) {
+  .MuiContainer-maxWidthLg {
+    max-width: 100% !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .MuiContainer-maxWidthLg {
+    max-width: 100% !important;
+  }
+}
+@media screen and (max-height: 768px) {
+  .MuiContainer-maxWidthLg {
+    padding: 10px !important;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--theme-color3);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #919191;
+}
+.waviy-loading-text span {
+  color: var(--theme-color1);
+}
+.ps__thumb-y,
+.ps__rail-y {
+  height: 0 !important;
+}
+.MuiPaper-root.MuiPaper-elevation .form__header {
+  position: sticky;
+  top: 10px;
+  z-index: 2;
+}
+
+.MuiPaper-root.MuiPaper-elevation .form__header::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #fff;
+  z-index: -1;
+}
+
+/* demo help pop custom style  */
+.driver-popover {
+  padding: 6px;
+  max-width: 370px;
+}
+
+.driver-popover > * {
+  font-family: "Roboto", sans-serif;
+}
+
+.driver-popover .driver-popover-next-btn,
+.driver-popover-prev-btn:not(.driver-popover-btn-disabled) {
+  background: var(--primary-bg);
+  color: #fff;
+  text-shadow: none;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-weight: 500;
+  font-size: 0.97rem;
+}
+
+.driver-popover .driver-popover-title {
+  background: var(--primary-bg);
+  color: #fff;
+  padding: 6px;
+  padding-right: 2rem;
+  border-radius: 6px;
+  animation: title 0.5s ease-in-out forwards;
+  transform: translateY(8px);
+  opacity: 0;
+}
+
+@keyframes title {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.driver-popover .driver-popover-close-btn {
+  top: 12px;
+  right: 5px;
+  color: rgb(255, 255, 255, 0.54);
+}
+
+.driver-popover .driver-popover-close-btn:hover {
+  color: rgb(255, 255, 255, 1);
+}
+
+.driver-popover .driver-popover-description {
+  padding: 6px;
+  animation: desc 0.5s ease-in-out 0.2s forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  font-weight: 600;
+  font-size: 0.97rem;
+}
+
+@keyframes desc {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.driver-popover .driver-popover-progress-text {
+  padding-left: 6px;
+}
+
+/* pivot custom css */
+
+.wdr-ui-btn {
+  background: var(--primary-bg) !important;
+  color: var(--white) !important;
+}
+
+.wdr-ui-btn:hover {
+  opacity: 0.7 !important;
+  color: var(--white) !important;
+}
+
+#wdr-pivot-view
+  #wdr-fields-view
+  .wdr-popup-content
+  .wdr-list-wrap
+  .wdr-list-content
+  #wdr-lst-hierarchies
+  li.wdr-checked:not(.wdr-level-folder)
+  #wdr-icon-display {
+  background: var(--theme-color1) !important;
+  color: var(--white) !important;
+}
+#wdr-pivot-view a.wdr-ui-checkbox.wdr-selected .wdr-ui-label:before {
+  background: var(--theme-color1) !important;
+  color: var(--white) !important;
+}
+
+#wdr-toolbar-wrapper .wdr-toolbar-ui .wdr-radio-wrap label:after {
+  background: var(--theme-color1) !important;
+  left: 4.5px !important;
+}
+
+#wdr-pivot-view .wdr-fields-view-wrap #wdr-btn-open-fields:before,
+#wdr-pivot-view #wdr-fields-view .wdr-popup-header #wdr-btn-add-measure:before {
+  color: var(--white) !important;
+}
+
+.wdr-list-header {
+  background: var(--theme-color4) !important;
+}
+
+#wdr-pivot-view
+  #wdr-fields-view
+  .wdr-popup-content
+  .wdr-list-wrap
+  .wdr-list-header
+  span.wdr-ui-label {
+  color: var(--theme-color1) !important;
+}
+
+/* svg icon */
+#wdr-toolbar-wrapper #wdr-toolbar li a svg,
+#wdr-toolbar-wrapper #wdr-toolbar li a svg path {
+  fill: var(--theme-color3) !important;
+  font-size: 0.5rem !important;
+}
+
+#wdr-pivot-view .wdr-grid-layout .wdr-filters .wdr-header,
+#wdr-pivot-view .wdr-grid-layout.wdr-flat-view .wdr-header {
+  background: var(--theme-color4) !important;
+  color: var(--theme-color1) !important;
+}
+
+/* cell backgound */
+#wdr-pivot-view .wdr-grid-layout div.wdr-row {
+  background: var(--theme-color4) !important;
+}
+
+/* popup title */
+#wdr-pivot-view div.wdr-ui-window .wdr-popup-title {
+  color: var(--theme-color1) !important;
+}
+
+/* calculated value group button */
+#wdr-pivot-view
+  #wdr-calculated-view
+  .wdr-popup-content
+  #wdr-func-btn-group
+  .wdr-calc-action {
+  background: var(--theme-color3) !important;
+  color: var(--white) !important;
+}
+
+/* calculated value textarea */
+#wdr-pivot-view
+  #wdr-calculated-view
+  .wdr-popup-content
+  .wdr-formula-wrap
+  #wdr-formula-input {
+  background: #fff !important;
+}
+
+/* drag and select tooltip */
+#wdr-pivot-view .wdr-grid-layout .wdr-auto-calculation-bar {
+  display: none !important;
+}
+
+.wdr-credits {
+  display: none !important;
+}

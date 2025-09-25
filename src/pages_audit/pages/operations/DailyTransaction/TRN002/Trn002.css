@@ -1,0 +1,57 @@
+.txtRight {
+  text-align: end !important;
+}
+.txtCenter {
+  text-align: center !important;
+}
+#isFav {
+  background-color: #98e0ff;
+  border: 0px;
+}
+.row0 {
+  display: flex;
+  align-items: center;
+}
+.row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dialogFooter {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+#searchContainer {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 4px 0px #999999;
+  border-radius: 5px;
+  padding: 5px;
+  height: 36px;
+}
+#check {
+  cursor: pointer;
+}
+
+#searchField {
+  border: 0px;
+  height: 34px;
+}
+#noRecord {
+  height: 13vh;
+  text-align: center;
+  margin-top: 10vh;
+}
+#topHead {
+  /* background-image: linear-gradient(to right, red, yellow); */
+  background: #e9f1ff;
+}
+#head {
+  font-size: small;
+  padding: 7px;
+  /* text-align: center; */
+  color: #00458e;
+  font-weight: 600;
+}

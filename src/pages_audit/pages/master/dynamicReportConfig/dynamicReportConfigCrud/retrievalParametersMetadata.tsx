@@ -1,0 +1,177 @@
+import { GridMetaDataType } from "@acuteinfo/common-base";
+
+export const RetrievalParametersGridMetaData: GridMetaDataType = {
+  gridConfig: {
+    dense: true,
+    gridLabel: "AmountLabelMapping",
+    rowIdColumn: "SR_CD",
+    defaultColumnConfig: {
+      width: 400,
+      maxWidth: 450,
+      minWidth: 300,
+    },
+    allowColumnReordering: true,
+    disableSorting: false,
+    hideHeader: true,
+    disableGroupBy: true,
+    enablePagination: true,
+    pageSizes: [10, 20, 30],
+    defaultPageSize: 10,
+    containerHeight: {
+      min: "40vh",
+      max: "50vh",
+    },
+    allowFilter: false,
+    allowColumnHiding: false,
+    allowRowSelection: false,
+    isCusrsorFocused: true,
+    hiddenFlag: "_hidden",
+  },
+  filters: [
+    {
+      accessor: "SR_CD",
+      columnName: "SrNo",
+      filterComponentType: "valueFilter",
+      gridProps: {
+        xs: 12,
+        md: 12,
+        sm: 12,
+      },
+    },
+  ],
+  columns: [
+    {
+      accessor: "SR_CD",
+      columnName: "SrNo",
+      sequence: 1,
+      alignment: "left",
+      componentType: "default",
+      width: 80,
+      minWidth: 80,
+      maxWidth: 120,
+      isAutoSequence: true,
+    },
+    {
+      accessor: "COLUMN_ACCESSOR",
+      columnName: "ColumnAccessor",
+      sequence: 2,
+      componentType: "default",
+      placeholder: "EnterColumnAccessor",
+      width: 180,
+      minWidth: 150,
+      maxWidth: 250,
+      required: true,
+      schemaValidation: {
+        type: "string",
+        rules: [{ name: "required", params: ["ThisFieldisrequired"] }],
+      },
+    },
+    {
+      accessor: "COLUMN_NAME",
+      columnName: "ColumnName",
+      sequence: 3,
+      componentType: "editableTextField",
+      placeholder: "EnterColumnName",
+      width: 180,
+      minWidth: 150,
+      maxWidth: 250,
+      required: true,
+      schemaValidation: {
+        type: "string",
+        rules: [{ name: "required", params: ["ThisFieldisrequired"] }],
+      },
+    },
+    {
+      accessor: "COLUMN_TYPE",
+      columnName: "ColumnType",
+      sequence: 4,
+      componentType: "editableSelect",
+      placeholder: "0.00",
+      width: 150,
+      minWidth: 120,
+      maxWidth: 200,
+      required: true,
+      options: [
+        { label: "numberFormat", value: "numberFormat" },
+        { label: "checkbox", value: "checkbox" },
+        { label: "datetimePicker", value: "datetimePicker" },
+        { label: "timePicker", value: "timePicker" },
+        { label: "select", value: "select" },
+        { label: "textField", value: "textField" },
+        { label: "datePicker", value: "datePicker" },
+        { label: "amountField", value: "amountField" },
+      ],
+      schemaValidation: {
+        type: "string",
+        rules: [{ name: "required", params: ["ThisFieldisrequired"] }],
+      },
+    },
+    {
+      accessor: "DEFAULT_VALUE",
+      columnName: "DefaultValue",
+      sequence: 5,
+      componentType: "editableTextField",
+      placeholder: "EnterDefaultValue",
+      width: 150,
+      minWidth: 120,
+      maxWidth: 200,
+    },
+    {
+      accessor: "IS_REQUIRED",
+      columnName: "Required",
+      sequence: 6,
+      componentType: "editableCheckbox",
+      placeholder: "EnterDefaultValue",
+      width: 100,
+      minWidth: 80,
+      maxWidth: 120,
+    },
+    {
+      accessor: "COLUMN_WIDTH",
+      columnName: "ColumnWidth",
+      sequence: 7,
+      componentType: "editableTextField",
+      placeholder: "EnterColumnWidth",
+      width: 110,
+      minWidth: 80,
+      maxWidth: 140,
+    },
+    {
+      accessor: "COLUMN_FORMAT",
+      columnName: "ColumnFormat",
+      sequence: 8,
+      componentType: "editableTextField",
+      placeholder: "EnterColumnFormat",
+      width: 120,
+      minWidth: 180,
+      maxWidth: 250,
+    },
+    {
+      accessor: "WHERE_SEQ_ID",
+      columnName: "WhereSequence",
+      sequence: 9,
+      alignment: "right",
+      componentType: "editableNumberFormat",
+      placeholder: "EnterWhereSequence",
+      width: 130,
+      minWidth: 80,
+      maxWidth: 150,
+      className: "textInputFromRight",
+      FormatProps: {
+        isAllowed: (values) => {
+          if (values?.value?.length > 5) {
+            return false;
+          }
+          if (values.floatValue === 0) {
+            return false;
+          }
+          return true;
+        },
+      },
+      schemaValidation: {
+        type: "string",
+        rules: [{ name: "required", params: ["ThisFieldisrequired"] }],
+      },
+    },
+  ],
+};

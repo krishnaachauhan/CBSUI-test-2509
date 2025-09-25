@@ -1,0 +1,64 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1171276210">
+<rect id="Rectangle 34624669" width="40" height="40" fill="white">
+                                    </rect>
+<g id="Group 1171276208">
+<g id="Group 1171276202">
+<path id="Vector 715" d="M20 5H8C6.89543 5 6 5.89543 6 7V34C6 35.1046 6.89543 36 8 36H26C27.1046 36 28 35.1046 28 34V19.5312" stroke="url(#paint0_linear_106_359)" stroke-linecap="round"/>
+</g>
+<g id="Group 1171276203">
+<rect id="Rectangle 34624675" x="6" y="5" width="22" height="31" rx="2" fill="white"/>
+<g id="Group 1171276205">
+<g id="Group 1171276204">
+<path id="Vector 716" d="M12.2273 16.5815L12.2273 23.4062L15.9091 23.4062L15.9091 16.5815L17 16.5815L14 12.75L11 16.5815L12.2273 16.5815Z" fill="#2253BD">
+                                    <animate attributeName="d" values="M12.2273 16.5815L12.2273 23.4062L15.9091 23.4062L15.9091 16.5815L17 16.5815L14 12.75L11 16.5815L12.2273 16.5815Z;M12.2273 12.5815L12.2273 19.4062L15.9091 19.4062L15.9091 12.5815L17 12.5815L14 8.75L11 12.5815L12.2273 12.5815Z;M12.2273 16.5815L12.2273 23.4062L15.9091 23.4062L15.9091 16.5815L17 16.5815L14 12.75L11 16.5815L12.2273 16.5815Z" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/></path>
+<path id="Vector 717" d="M18.2273 24.4185L18.2273 17.5938L21.9091 17.5938L21.9091 24.4185L23 24.4185L20 28.25L17 24.4185L18.2273 24.4185Z" fill="#3EA8EA">
+                                    <animate attributeName="d" values="M18.2273 24.4185L18.2273 17.5938L21.9091 17.5938L21.9091 24.4185L23 24.4185L20 28.25L17 24.4185L18.2273 24.4185Z;M18.2273 28.4185L18.2273 21.5938L21.9091 21.5938L21.9091 28.4185L23 28.4185L20 32.25L17 28.4185L18.2273 28.4185Z;M18.2273 24.4185L18.2273 17.5938L21.9091 17.5938L21.9091 24.4185L23 24.4185L20 28.25L17 24.4185L18.2273 24.4185Z" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/></path>
+</g>
+</g>
+</g>
+<g id="Group 1171276207">
+<ellipse id="Ellipse 1858" cx="26.5" cy="11.5" rx="7.5" ry="7.5" fill="url(#paint1_radial_106_359)"/>
+<g id="Group 1171276206" filter="url(#filter0_d_106_359)">
+<path id="Polygon 1" d="M25.7579 13.0154C25.8438 13.6686 27.0271 13.6674 27.1304 13.0154L27.9909 8.1466C28.088 7.53457 27.3929 6.5 26.5 6.5C25.6182 6.5 24.9266 7.52206 25.0063 8.12765L25.7579 13.0154Z" fill="white">
+                                    <animate attributeName="d" values="M25.7579 13.0154C25.8438 13.6686 27.0271 13.6674 27.1304 13.0154L27.9909 8.1466C28.088 7.53457 27.3929 6.5 26.5 6.5C25.6182 6.5 24.9266 7.52206 25.0063 8.12765L25.7579 13.0154Z;M26.6139 13.1823C27.0126 13.7067 28.0393 13.1186 27.8056 12.5013L26.1369 7.84707C25.9174 7.26756 24.8006 6.71423 24.0254 7.15725C23.2598 7.5948 23.1665 8.82532 23.5361 9.31158L26.6139 13.1823Z;M25.7579 13.0154C25.8438 13.6686 27.0271 13.6674 27.1304 13.0154L27.9909 8.1466C28.088 7.53457 27.3929 6.5 26.5 6.5C25.6182 6.5 24.9266 7.52206 25.0063 8.12765L25.7579 13.0154Z" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/></path>
+<ellipse id="Ellipse 1859" cx="26.2374" cy="15.2374" rx="0.875" ry="0.875" transform="rotate(45.5369 26.2374 15.2374)" fill="white">
+                                    <animate attributeName="cx" values="26.2374;28.1327;26.2374" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/>
+                                    <animate attributeName="cy" values="15.2374;14.8735;15.2374" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/>
+                                    <animateTransform attributeName="transform" type="rotate" values="45.5369 26.2374 15.2374;15.7891 28.1327 14.8735;45.5369 26.2374 15.2374" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/></ellipse>
+</g>
+</g>
+
+                                    </g>
+
+                                    </g>
+<defs>
+<filter id="filter0_d_106_359" x="21" y="2.5" width="11" height="17.6124" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_106_359">
+                                    </feBlend>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_106_359" result="shape">
+                                    </feBlend>
+
+                                    
+                                    <animate attributeName="x" values="21;19.3265;21" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/>
+                                    <animate attributeName="y" values="2.5;2.99661;2.5" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/>
+                                    <animate attributeName="width" values="11;13.6814;11" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/>
+                                    <animate attributeName="height" values="17.6124;16.7521;17.6124" begin="0s" dur="3s" repeatCount="indefinite" fill="freeze" calcMode="linear" keyTimes="0;0.5;1"/></filter>
+<linearGradient id="paint0_linear_106_359" x1="5" y1="14.2031" x2="27.9936" y2="15.7511" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3EA8EA"/>
+<stop offset="1" stop-color="#2253BD"/>
+
+                                    </linearGradient>
+<radialGradient id="paint1_radial_106_359" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(28.375 5.875) rotate(103.393) scale(13.4919)">
+<stop offset="0.207758" stop-color="#F2AC24"/>
+<stop offset="1" stop-color="#ED780C"/>
+
+                                    </radialGradient>
+</defs>
+</svg>

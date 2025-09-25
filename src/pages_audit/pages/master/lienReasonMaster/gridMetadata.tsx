@@ -1,0 +1,61 @@
+import { GridMetaDataType } from "@acuteinfo/common-base";
+
+export const LienReasonMstGridMetaData: GridMetaDataType = {
+  gridConfig: {
+    dense: true,
+    gridLabel: "",
+    rowIdColumn: "REASON_CD",
+    defaultColumnConfig: {
+      width: 350,
+      minWidth: 300,
+      maxWidth: 400,
+    },
+    allowColumnReordering: true,
+    disableSorting: false,
+    hideHeader: false,
+    disableGroupBy: true,
+    enablePagination: true,
+    pageSizes: [20, 40, 60],
+    defaultPageSize: 20,
+    containerHeight: {
+      min: "70vh",
+      max: "70vh",
+    },
+    isCusrsorFocused: true,
+    allowRowSelection: false,
+  },
+  columns: [
+    {
+      accessor: "SR_NO",
+      columnName: "SrNo",
+      sequence: 1,
+      alignment: "left",
+      componentType: "default",
+      width: 100,
+      minWidth: 60,
+      maxWidth: 150,
+      isAutoSequence: true,
+    },
+    {
+      accessor: "REASON_CD",
+      columnName: "Code",
+      sequence: 2,
+      alignment: "left",
+      componentType: "default",
+      width: 150,
+      minWidth: 130,
+      maxWidth: 170,
+    },
+    {
+      accessor: "REASON_NM",
+      columnName: "Description",
+      sequence: 3,
+      alignment: "left",
+      componentType: "default",
+      width: 380,
+      minWidth: 340,
+      maxWidth: 400,
+      showTooltip: true,
+    },
+  ],
+};

@@ -1,0 +1,739 @@
+{
+  "DEMO_TOUR": {
+    "/EnfinityCore/dashboard": [
+      {
+        "element": ".MuiDrawer-paper .MuiList-root",
+        "popover": {
+          "title": "DashboardSidebarTitle",
+          "description": "DashboardSidebarDesc",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".appbar-class > header > .MuiToolbar-root > .MuiBox-root:first-child > .MuiButtonBase-root",
+        "popover": {
+          "title": "DashboardNavPanelToggleTitle",
+          "description": "DashboardNavPanelToggleDesc",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".appbar-class .global-screen-search",
+        "popover": {
+          "title": "DashboardGlobalSearchTitle",
+          "description": "DashboardGlobalSearchDesc",
+          "align": "center",
+          "side": "bottom"
+        }
+      },
+      {
+        "element": ".appbar-class button[aria-label='Account Inquiry']",
+        "popover": {
+          "title": "DashboardAccountViewTitle",
+          "description": "DashboardAccountViewDesc",
+          "align": "end",
+          "side": "bottom"
+        }
+      },
+      {
+        "element": ".appbar-class button[aria-label='Quick-View']",
+        "popover": {
+          "title": "DashboardBranchSwitchTitle",
+          "description": "DashboardBranchSwitchDesc",
+          "align": "end",
+          "side": "bottom"
+        }
+      },
+      {
+        "element": ".appbar-class button[aria-label='logout']",
+        "popover": {
+          "title": "DashboardLogoutTitle",
+          "description": "DashboardLogoutDesc",
+          "align": "end",
+          "side": "bottom"
+        }
+      },
+      {
+        "element": ".appbar-class > header > .MuiToolbar-root > .MuiStack-root:last-of-type",
+        "popover": {
+          "title": "DashboardProfileTitle",
+          "description": "DashboardProfileDesc",
+          "align": "end",
+          "side": "bottom"
+        }
+      },
+      {
+        "element": ".quick-access-card",
+        "popover": {
+          "title": "DashboardQuickAccessTitle",
+          "description": "DashboardQuickAccessDesc",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".notification-card",
+        "popover": {
+          "title": "DashboardAlertsTitle",
+          "description": "DashboardAlertsDesc",
+          "align": "center",
+          "side": "left"
+        }
+      },
+      {
+        "element": ".transaction-graph-card",
+        "popover": {
+          "title": "DashboardTransactionAnalyticsTitle",
+          "description": "DashboardTransactionAnalyticsDesc",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".transaction-details-card",
+        "popover": {
+          "title": "DashboardTodaysTransactionTitle",
+          "description": "DashboardTodaysTransactionDesc",
+          "align": "center",
+          "side": "top"
+        }
+      }
+    ],
+    "/EnfinityCore/operation/daily_tran_F1": [
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ACCOUNT",
+        "popover": {
+          "title": "Account details",
+          "description": "Account Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .LIMIT",
+        "popover": {
+          "title": "Limit details",
+          "description": "Limit Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .STOCK",
+        "popover": {
+          "title": "Stock details",
+          "description": "Stock Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .DISBDTL",
+        "popover": {
+          "title": "Disbursement Details",
+          "description": "Disbursement Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .SUBSIDY",
+        "popover": {
+          "title": "Subsidy details",
+          "description": "Subsidy Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .JOINT",
+        "popover": {
+          "title": "Joint details",
+          "description": "Joint Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .TODAYS",
+        "popover": {
+          "title": "Toadys Transactions details",
+          "description": "Toadys Transactions details.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .CHQ",
+        "popover": {
+          "title": "Cheques details",
+          "description": "Cheques details of Account Holder. Cheque Return history, Today's clearing and other cheqes status.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .SNAPSHOT",
+        "popover": {
+          "title": "Snapshot details",
+          "description": "View scroll Register and snapshot details of account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .HOLDCHRG",
+        "popover": {
+          "title": "Hold charges details",
+          "description": "View Hold charges details of account holder and Paid/ Waive of transaction.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .DOCS",
+        "popover": {
+          "title": "Documents details",
+          "description": "View Documents details of account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .STOP",
+        "popover": {
+          "title": "Stop Payment details",
+          "description": "View Stop Payment and Cheques details of account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .INSU",
+        "popover": {
+          "title": "Insurance details",
+          "description": "View Insurance details of account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .OTHERAC",
+        "popover": {
+          "title": "Other accounts details",
+          "description": "View Other account details.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .SI",
+        "popover": {
+          "title": "Standing Instruction details",
+          "description": "View Standing Instruction details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .LIEN",
+        "popover": {
+          "title": "Lien details",
+          "description": "View Lien details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .OUTWARD",
+        "popover": {
+          "title": "Outward details",
+          "description": "View Outward details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .TEMPOD",
+        "popover": {
+          "title": "Temporary Overdraft (OD) Against Security or Funds details",
+          "description": "View Temporary Overdraft (OD) Against Security or Funds details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ATM",
+        "popover": {
+          "title": "ATM cards details",
+          "description": "View ATM cards details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .IMPS",
+        "popover": {
+          "title": "IMPS details",
+          "description": "View IMPS details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ASBA",
+        "popover": {
+          "title": "ASBA details",
+          "description": "View ASBA details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .PMBY",
+        "popover": {
+          "title": "PMBY details",
+          "description": "View PMBY details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .APY",
+        "popover": {
+          "title": "APY details",
+          "description": "View APY details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .APBS",
+        "popover": {
+          "title": "APBS details",
+          "description": "View APBS details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ACHIW",
+        "popover": {
+          "title": "ACH I/W details",
+          "description": "View ACH I/W details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ACHOW",
+        "popover": {
+          "title": "ACH O/W details",
+          "description": "View ACH O/W details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .SPINST",
+        "popover": {
+          "title": "Special Instruction details",
+          "description": "View Special Instruction details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .GRPAC",
+        "popover": {
+          "title": "Group Accounts details",
+          "description": "Group Accounts details.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".ACCOUNT_DTL",
+        "popover": {
+          "title": "Enter Account details",
+          "description": "Enter Transaction account details.",
+          "align": "center",
+          "side": "top"
+        }
+      },
+      {
+        "element": ".ENTRIES",
+        "popover": {
+          "title": "Transaction Entries",
+          "description": "Today's all transaction entries which are not confirm. Also Remove any entries.",
+          "align": "center",
+          "side": "top"
+        }
+      },
+      {
+        "element": ".RESET",
+        "popover": {
+          "title": "Reset",
+          "description": "Reset the entered account number details.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".CALCULATOR",
+        "popover": {
+          "title": "Calculator",
+          "description": "Open Calculator.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".VIEW_ALL",
+        "popover": {
+          "title": "View all",
+          "description": "View all Today's Entires.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".BAKC_TO_ENTRY",
+        "popover": {
+          "title": "Transaction Posting",
+          "description": "Return no make new Transaction entry.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".SCROLL_REMOVE",
+        "popover": {
+          "title": "Scroll Remove",
+          "description": "Search entries by Scroll number and remove same scroll number all entries.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".VOUCHER_SEARCH",
+        "popover": {
+          "title": "Voucher Search",
+          "description": "Search entries by Voucher number and Remove it.",
+          "align": "center",
+          "side": "right"
+        }
+      }
+    ],
+    "/EnfinityCore/operation/cnf_daily_tran_F2": [
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ACCOUNT",
+        "popover": {
+          "title": "Account details",
+          "description": "Account Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .LIMIT",
+        "popover": {
+          "title": "Limit details",
+          "description": "Limit Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .STOCK",
+        "popover": {
+          "title": "Stock details",
+          "description": "Stock Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .DISBDTL",
+        "popover": {
+          "title": "Disbursement Details",
+          "description": "Disbursement Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .SUBSIDY",
+        "popover": {
+          "title": "Subsidy details",
+          "description": "Subsidy Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .JOINT",
+        "popover": {
+          "title": "Joint details",
+          "description": "Joint Details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .TODAYS",
+        "popover": {
+          "title": "Toadys Transactions details",
+          "description": "Toadys Transactions details.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .CHQ",
+        "popover": {
+          "title": "Cheques details",
+          "description": "Cheques details of Account Holder. Cheque Return history, Today's clearing and other cheqes status.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .SNAPSHOT",
+        "popover": {
+          "title": "Snapshot details",
+          "description": "View scroll Register and snapshot details of account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .HOLDCHRG",
+        "popover": {
+          "title": "Hold charges details",
+          "description": "View Hold charges details of account holder and Paid/ Waive of transaction.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .DOCS",
+        "popover": {
+          "title": "Documents details",
+          "description": "View Documents details of account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .STOP",
+        "popover": {
+          "title": "Stop Payment details",
+          "description": "View Stop Payment and Cheques details of account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .INSU",
+        "popover": {
+          "title": "Insurance details",
+          "description": "View Insurance details of account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .OTHERAC",
+        "popover": {
+          "title": "Other accounts details",
+          "description": "View Other account details.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .SI",
+        "popover": {
+          "title": "Standing Instruction details",
+          "description": "View Standing Instruction details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .LIEN",
+        "popover": {
+          "title": "Lien details",
+          "description": "View Lien details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .OUTWARD",
+        "popover": {
+          "title": "Outward details",
+          "description": "View Outward details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .TEMPOD",
+        "popover": {
+          "title": "Temporary Overdraft (OD) Against Security or Funds details",
+          "description": "View Temporary Overdraft (OD) Against Security or Funds details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ATM",
+        "popover": {
+          "title": "ATM cards details",
+          "description": "View ATM cards details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .IMPS",
+        "popover": {
+          "title": "IMPS details",
+          "description": "View IMPS details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ASBA",
+        "popover": {
+          "title": "ASBA details",
+          "description": "View ASBA details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .PMBY",
+        "popover": {
+          "title": "PMBY details",
+          "description": "View PMBY details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .APY",
+        "popover": {
+          "title": "APY details",
+          "description": "View APY details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .APBS",
+        "popover": {
+          "title": "APBS details",
+          "description": "View APBS details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ACHIW",
+        "popover": {
+          "title": "ACH I/W details",
+          "description": "View ACH I/W details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .ACHOW",
+        "popover": {
+          "title": "ACH O/W details",
+          "description": "View ACH O/W details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .SPINST",
+        "popover": {
+          "title": "Special Instruction details",
+          "description": "View Special Instruction details of Account holder.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".MuiTabs-scroller div[aria-label='ant example'] .GRPAC",
+        "popover": {
+          "title": "Group Accounts details",
+          "description": "Group Accounts details.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".ENTRIES",
+        "popover": {
+          "title": "Transaction Entries",
+          "description": "Today's all transaction entries which are not confirm. Remove/Confirm it.",
+          "align": "center",
+          "side": "top"
+        }
+      },
+      {
+        "element": ".CALCULATOR",
+        "popover": {
+          "title": "Calculator",
+          "description": "Open Calculator.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".VIEW_ALL",
+        "popover": {
+          "title": "View all",
+          "description": "View all Today's Entires which are confirmed as well as not confirm.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".SCROLL_REMOVE",
+        "popover": {
+          "title": "Scroll Remove",
+          "description": "Search entries by Scroll number and remove same scroll number all entries.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".SCROLL_CONFIRM",
+        "popover": {
+          "title": "Scroll Confirm",
+          "description": "Search entries by Scroll number and Confirm same scroll number all entries.",
+          "align": "center",
+          "side": "right"
+        }
+      },
+      {
+        "element": ".VOUCHER_SEARCH",
+        "popover": {
+          "title": "Voucher Search",
+          "description": "Search entries by Voucher number and Remove/Confirm it.",
+          "align": "center",
+          "side": "right"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+export { NpaCategoryMasterGrid as default } from "./npaCategoryMasterGrid";

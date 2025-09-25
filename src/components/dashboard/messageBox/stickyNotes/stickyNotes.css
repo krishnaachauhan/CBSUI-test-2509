@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+code {
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode {
+  background-color: black;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
+.container {
+  /* max-width: 960px; */
+  /* margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px; */
+  padding: 15px;
+  /* min-height: 100vh; */
+}
+
+.notes-list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.note.new {
+  background-color: #67d7cc;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 5px 5px 10px -2px;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: #67d7cc;
+  font-family: "Roboto", sans-serif;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save {
+  border: none;
+  border-radius: 15px;
+  padding: 4px 10px 4px 10px;
+}
+
+.save:hover {
+  /* background-color: #ededed; */
+  cursor: pointer;
+}
+
+.note {
+  /* background-color: #fef68a; */
+  /* background: linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.25)); */
+  background-color: #fffd75;
+
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  font-family: "Roboto", sans-serif;
+}
+.note:hover {
+  box-shadow: 5px 5px 10px -2px;
+  cursor: pointer;
+}
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-icon {
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(233, 233, 233);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+  width: 100%;
+}
+
+.search input:focus {
+  outline: none;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  /* gap: 40px; */
+}
+
+/* .sidebar {
+  width: 60px;
+  cursor: pointer;
+} */

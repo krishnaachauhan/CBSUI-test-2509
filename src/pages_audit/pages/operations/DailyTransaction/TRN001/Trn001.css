@@ -1,0 +1,91 @@
+/* #ea3a1b red error colour */
+
+#txtRight {
+  text-align: end !important;
+}
+
+#isFav {
+  background-color: #98e0ff;
+  border: 0px;
+}
+.row0 {
+  display: flex;
+  align-items: center;
+}
+#searchContainer {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 4px 0px #999999;
+  border-radius: 5px;
+  padding: 5px;
+  height: 36px;
+}
+
+#searchField {
+  border: 0px;
+  height: 34px;
+}
+
+#iconBtn {
+  border: 0px;
+  background: white;
+}
+
+#noRecord {
+  height: 13vh;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+#topHead {
+  /* background-image: linear-gradient(to right, red, yellow); */
+  background: #e9f1ff;
+}
+#head {
+  font-size: small;
+  padding: 7px;
+  /* text-align: center; */
+  color: #00458e;
+  font-weight: 600;
+}
+
+.css-12960u7-MuiInputBase-root-MuiOutlinedInput-root {
+  height: 37px;
+}
+
+.dialogTitle {
+  background: var(--theme-color5);
+  color: var(--theme-color4);
+  height: 40px;
+  align-items: center;
+  display: flex;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.dialogBtn {
+  background: var(--theme-color1);
+  color: var(--theme-color4);
+}
+.clearBtn {
+  cursor: pointer;
+  border: 0;
+  background: white;
+  padding: 7px 2px 0 2px;
+  vertical-align: top;
+}
+.clearBtn :hover {
+  color: rgb(17, 104, 255);
+}
+
+/* .MuiAutocomplete-hasPopupIcon.css-f34qqq-MuiAutocomplete-root
+  .MuiOutlinedInput-root,
+.MuiAutocomplete-hasClearIcon.css-f34qqq-MuiAutocomplete-root
+  .MuiOutlinedInput-root {
+  padding-right: 8px;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-f34qqq-MuiAutocomplete-root
+  .MuiOutlinedInput-root {
+  padding-right: 8px;
+} */

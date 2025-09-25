@@ -1,0 +1,5 @@
+{
+  "API_URL": "http://10.150.17.8:30002/",
+  "WEBSOCKET_URL": "https://10.150.17.7:30956/ws",
+  "WEBSOCKET_ENABLED": "N"
+}

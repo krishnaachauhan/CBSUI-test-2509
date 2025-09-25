@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sideImage {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+.bank-name,
+.emp-id {
+  margin: 8px 0px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1em;
+}
+
+.bank-name {
+  word-wrap: break-word;
+}
+
+.name-heading {
+  font-weight: 400;
+  color: var(--theme-color1);
+  position: relative;
+  z-index: 1;
+}
+.name-heading span {
+  color: var(--theme-color1);
+
+  font-weight: 700;
+}
+/* 
+.bank-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bank-name-container {
+  overflow: hidden;
+}
+
+.bank-name {
+  animation: marquee 15s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */

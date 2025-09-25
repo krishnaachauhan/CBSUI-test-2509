@@ -1,0 +1,65 @@
+#txtRight {
+  text-align: end !important;
+}
+
+#isFav {
+  background-color: #98e0ff;
+  border: 0px;
+}
+.row0 {
+  display: flex;
+  align-items: center;
+}
+#searchContainer {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 4px 0px #999999;
+  border-radius: 5px;
+  padding: 5px;
+  height: 36px;
+}
+
+#searchField {
+  border: 0px;
+  height: 34px;
+}
+
+#iconBtn {
+  border: 0px;
+  background: white;
+}
+
+#noRecord {
+  height: 13vh;
+  text-align: center;
+  margin-top: 10vh;
+}
+
+#topHead {
+  /* background-image: linear-gradient(to right, red, yellow); */
+  background: #e9f1ff;
+}
+#head {
+  font-size: small;
+  padding: 7px;
+  /* text-align: center; */
+  color: #00458e;
+  font-weight: 600;
+}
+
+.css-12960u7-MuiInputBase-root-MuiOutlinedInput-root {
+  height: 37px;
+}
+
+.title {
+  background-image: linear-gradient(71.66deg, #4285f4 -2.97%, #885df5 111.3%);
+  color: white;
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.dialogFooter {
+  display: flex;
+  justify-content: center !important;
+  align-items: center;
+}

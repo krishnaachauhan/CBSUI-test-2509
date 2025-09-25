@@ -1,0 +1,99 @@
+#cardContainer {
+  width: 99%;
+  box-shadow: 0px 1px 5px -1px #999999;
+  border-radius: 5px;
+  /* margin-bottom: 5px; */
+  margin-right: 5px;
+  height: 35vh;
+  /* height: 48vh; */
+  overflow: auto;
+}
+
+#cardGridItem {
+  margin: 5px;
+}
+
+#cardLabel {
+  color: var(--theme-color3);
+}
+
+#cardHeading {
+  /* background-image: linear-gradient(71.66deg, #4285f4 -2.97%, #885df5 111.3%); */
+  background: var(--theme-color5);
+  /* background: #4263c7; */
+  position: sticky;
+  top: 8px;
+  z-index: 1;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  border-radius: 5px;
+  padding: 4px;
+  /* margin: 8px; */
+}
+
+#cardHeadingParent {
+  padding: 8px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background: var(--theme-color4);
+}
+
+#headingIcons {
+  color: var(--theme-color2);
+  margin: 0px 8px;
+  height: 21px;
+}
+#head {
+  font-size: small;
+  padding: 7px;
+  text-align: center;
+  color: #1c8aff;
+}
+
+@media (max-width: 500px) {
+  #media12 {
+    color: red !important;
+  }
+}
+
+.rightEnd {
+  text-align: end !important;
+}
+
+.errRed {
+  color: tomato;
+}
+.css-46bh2p-MuiCardContent-root {
+  padding: 8px;
+}
+.css-46bh2p-MuiCardContent-root:last-child {
+  padding-bottom: 8px;
+}
+@keyframes blinkingText {
+  0% {
+    opacity: 1;
+    color: black;
+  }
+  45% {
+    opacity: 1;
+    color: black;
+  }
+  50% {
+    opacity: 0.5; /* Adjust the opacity to your preference */
+    color: black;
+  }
+  55% {
+    opacity: 1;
+    color: var(--dynamic-color);
+  }
+  100% {
+    opacity: 1;
+    color: var(--dynamic-color);
+  }
+}
+
+.custom-carousel {
+  padding-top: 2px;
+}

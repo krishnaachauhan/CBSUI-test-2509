@@ -1,0 +1,172 @@
+import { GridMetaDataType } from "@acuteinfo/common-base";
+export const getApiGridMetaData: GridMetaDataType = {
+  gridConfig: {
+    dense: true,
+    gridLabel: "",
+    // gridLabel: "SelectGetAPIConfiguration",
+    rowIdColumn: "ID",
+    defaultColumnConfig: {
+      width: 150,
+      maxWidth: 250,
+      minWidth: 100,
+    },
+    allowColumnReordering: true,
+    hiddenFlag: "_hidden",
+    disableSorting: false,
+    disableGroupBy: true,
+    enablePagination: true,
+    hideFooter: false,
+    pageSizes: [20, 30, 50],
+    defaultPageSize: 20,
+    containerHeight: {
+      min: "69vh",
+      max: "69vh",
+    },
+    allowFilter: true,
+    allowColumnHiding: false,
+    allowRowSelection: true,
+  },
+  filters: [
+    {
+      accessor: "ACTION",
+      columnName: "Action",
+      filterComponentType: "valueFilter",
+      gridProps: {
+        xs: 12,
+        md: 12,
+        sm: 12,
+      },
+    },
+    {
+      accessor: "DISP_IS_COMPRESSED",
+      columnName: "Pagination",
+      filterComponentType: "valueFilter",
+      gridProps: {
+        xs: 12,
+        md: 12,
+        sm: 12,
+      },
+    },
+    {
+      accessor: "DISP_PAGINATION",
+      columnName: "Pagination",
+      filterComponentType: "valueFilter",
+      gridProps: {
+        xs: 12,
+        md: 12,
+        sm: 12,
+      },
+    },
+    {
+      accessor: "DISP_CACHING",
+      columnName: "Caching",
+      filterComponentType: "valueFilter",
+      gridProps: {
+        xs: 12,
+        md: 12,
+        sm: 12,
+      },
+    },
+    {
+      accessor: "CACHING_INTERVAL",
+      columnName: "CachingInterval",
+      filterComponentType: "valueFilter",
+      gridProps: {
+        xs: 12,
+        md: 12,
+        sm: 12,
+      },
+    },
+  ],
+  columns: [
+    {
+      accessor: "ID",
+      columnName: "Id No.",
+      sequence: 1,
+      alignment: "center",
+      componentType: "default",
+      width: 70,
+      minWidth: 70,
+      maxWidth: 200,
+      // isAutoSequence: true,
+    },
+
+    {
+      accessor: "GET_TYPE",
+      columnName: "Get Type",
+      sequence: 5,
+      alignment: "left",
+      componentType: "default",
+      width: 80,
+      minWidth: 70,
+      maxWidth: 130,
+    },
+    {
+      accessor: "ACTION",
+      columnName: "Action",
+      sequence: 6,
+      alignment: "left",
+      componentType: "default",
+      width: 160,
+      minWidth: 100,
+      maxWidth: 200,
+    },
+    {
+      accessor: "GET_QUERY",
+      columnName: "Query",
+      sequence: 6,
+      alignment: "left",
+      componentType: "default",
+      width: 480,
+      minWidth: 400,
+      maxWidth: 1000,
+    },
+
+    {
+      accessor: "DISP_IS_COMPRESSED",
+      columnName: "IsCompressed",
+      sequence: 6,
+      alignment: "left",
+      componentType: "default",
+      width: 110,
+      minWidth: 50,
+      maxWidth: 150,
+    },
+    {
+      accessor: "DISP_PAGINATION",
+      columnName: "Pagination",
+      sequence: 6,
+      alignment: "left",
+      componentType: "default",
+      width: 90,
+      minWidth: 50,
+      maxWidth: 120,
+    },
+    {
+      accessor: "DISP_CACHING",
+      columnName: "Caching",
+      sequence: 6,
+      alignment: "left",
+      componentType: "default",
+      width: 85,
+      minWidth: 50,
+      maxWidth: 100,
+    },
+    {
+      accessor: "CACHING_INTERVAL",
+      columnName: "CachingInterval",
+      sequence: 6,
+      alignment: "right",
+      componentType: "default",
+      width: 110,
+      minWidth: 50,
+      maxWidth: 130,
+      shouldExclude: (initialValue, original) => {
+        if (Boolean(original?.CACHING === "Y")) {
+          return false;
+        }
+        return true;
+      },
+    },
+  ],
+};

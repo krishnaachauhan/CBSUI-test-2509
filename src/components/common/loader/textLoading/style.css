@@ -1,0 +1,21 @@
+.waviy-loading-text {
+  position: relative;
+}
+.waviy-loading-text span {
+  position: relative;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+.waviy-loading-text-1 {
+  --i: 1;
+}

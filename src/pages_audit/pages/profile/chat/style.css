@@ -1,0 +1,11 @@
+.chat-selected {
+  color: "#0288d1";
+  border-left: 6px solid #0288d1;
+}
+.rce-citem-body--bottom-status span {
+  background-color: #43a047 !important;
+}
+.message-list {
+  height: 100%;
+  overflow-y: auto;
+}

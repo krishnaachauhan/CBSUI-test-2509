@@ -1,0 +1,78 @@
+import { GridMetaDataType } from "@acuteinfo/common-base";
+
+export const scrollListMetadataData: GridMetaDataType = {
+  gridConfig: {
+    dense: true,
+    gridLabel: "PendingScrollNotobeConfirm",
+    rowIdColumn: "SCROLL1",
+    defaultColumnConfig: {
+      width: 150,
+      maxWidth: 250,
+      minWidth: 100,
+    },
+    allowColumnReordering: true,
+    disableSorting: false,
+    disableGroupBy: true,
+    enablePagination: true,
+    hideFooter: true,
+    pageSizes: [10, 20, 30],
+    defaultPageSize: 10,
+    containerHeight: {
+      min: "57vh",
+      max: "57vh",
+    },
+    allowFilter: false,
+    allowColumnHiding: false,
+    allowRowSelection: false,
+  },
+  filters: [],
+  columns: [
+    {
+      accessor: "SCROLL1",
+      columnName: "ScrollNo",
+      alignment: "right",
+      sequence: 10,
+      componentType: "default",
+      width: 120,
+    },
+    {
+      accessor: "CREDIT",
+      columnName: "Credit",
+      alignment: "right",
+      totalDecimalCount: 2,
+      sequence: 10,
+      componentType: "default",
+      width: 120,
+    },
+    {
+      accessor: "DEBIT",
+      columnName: "Debit",
+      sequence: 10,
+      componentType: "default",
+      alignment: "right",
+      totalDecimalCount: 2,
+      width: 120,
+    },
+    {
+      accessor: "ENTERED_BY",
+      columnName: "EnteredBy",
+      sequence: 11,
+      componentType: "default",
+      width: 100,
+    },
+    {
+      accessor: "VERIFIED_BY",
+      columnName: "verifiedBy",
+      sequence: 12,
+      componentType: "default",
+      width: 100,
+    },
+    {
+      accessor: "PENDING_CYCLE",
+      columnName: "PendingConfirmation",
+      sequence: 13,
+      componentType: "default",
+      width: 210,
+    },
+  ],
+};

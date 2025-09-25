@@ -1,0 +1,61 @@
+import { GroupReportMetaDataType } from "@acuteinfo/common-base";
+
+export const AuditMetadata: GroupReportMetaDataType = {
+  title: "Group Report Component",
+  hideHeader: false,
+  hideFooter: false,
+  retrievalType: "DATE",
+  autoFetch: false,
+  gridConfig: {
+    minHeight: "70vh",
+    maxHeight: "70vh",
+  },
+  columns: [
+    {
+      accessor: "SR_CD",
+      columnName: "Sr",
+      alignment: "left",
+      componentType: "default",
+      width: 200,
+      minWidth: 100,
+      maxWidth: 250,
+    },
+    {
+      accessor: "ACTION",
+      columnName: "Action",
+      alignment: "left",
+      componentType: "default",
+      width: 100,
+      minWidth: 80,
+      maxWidth: 150,
+    },
+    {
+      accessor: "COLUMN_NAME",
+      columnName: "Label Name",
+      alignment: "left",
+      componentType: "default",
+      width: 120,
+      minWidth: 100,
+      maxWidth: 150,
+    },
+    {
+      accessor: "OLD_VALUE",
+      columnName: "OldValue",
+      alignment: "left",
+      componentType: "default",
+      width: 300,
+      minWidth: 280,
+      maxWidth: 350,
+    },
+    {
+      accessor: "NEW_VALUE",
+      columnName: "NewValue",
+      alignment: "left",
+      componentType: "default",
+      width: 300,
+      minWidth: 280,
+      maxWidth: 350,
+    },
+  ],
+  groups: [{ groupName: "", accessor: "ROW_FLAG" }],
+};
