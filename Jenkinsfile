@@ -80,7 +80,6 @@ pipeline {
                 script {
                     sh """
                         docker build -t ${env.IMAGE_NAME}:${env.NEW_TAG} .
-                    //    echo \$DOCKER_PASSWORD | docker login -u \$DOCKER_USERNAME --password-stdin
                         docker push ${env.IMAGE_NAME}:${env.NEW_TAG}
                     """
                 }
