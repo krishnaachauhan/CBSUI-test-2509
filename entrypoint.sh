@@ -24,12 +24,42 @@ sed -i "s|__REACT_APP_API_URL__|${REACT_APP_API_URL}|g" /etc/nginx/nginx.conf
 sed -i "s|__REACT_WEBSOCKET_URL__|${REACT_WEBSOCKET_URL}|g" /etc/nginx/nginx.conf
 sed -i "s|__REACT_CSP_ALLOWED_URL__|${REACT_CSP_ALLOWED_URL}|g" /etc/nginx/nginx.conf
 
-# Step 4: Log output
+# Step 4: Add stub_status configuration if metrics are enabled
+if [ "${NGINX_ENABLE_METRICS:-false}" = "true" ]; then
+    echo "Enabling NGINX metrics (stub_status)..."
+    
+    # Create a separate server block for metrics on port 8080
+    cat <<'EOF' >> /etc/nginx/nginx.conf
+
+    # Metrics server for Prometheus
+    server {
+        listen 8080;
+        server_name localhost;
+        
+        location /stub_status {
+            stub_status;
+            allow 127.0.0.1;
+            allow ::1;
+            deny all;
+            access_log off;
+        }
+        
+        location /healthz {
+            access_log off;
+            return 200 "healthy\n";
+            add_header Content-Type text/plain;
+        }
+    }
+EOF
+    echo "NGINX metrics configuration added."
+fi
+
+# Step 5: Log output
 echo "Generated configuration.json:"
 cat /var/www/netbanking/config/configuration.json
 
 echo "Final nginx.conf:"
 cat /etc/nginx/nginx.conf
 
-# Step 5: Start nginx in foreground
+# Step 6: Start nginx in foreground
 nginx -g 'daemon off;'
