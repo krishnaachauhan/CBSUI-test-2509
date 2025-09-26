@@ -100,8 +100,8 @@ pipeline {
             steps {
                 script {
                     sh """
-                        git config user.name "jenkins"
-                        git config user.email "jenkins@yourdomain.com"
+                        git config user.name "krishnaachauhan"
+                        git config user.email "krishna.chauhan@bankaiinformatics.co.in"
                         git add ${env.FILENAME}
                         git commit -m "Update image tag to ${env.NEW_TAG}"
                         git push https://${env.GIT_CREDENTIALS}@${env.GIT_REPO_URL.replace('https://', '')} HEAD:${env.BRANCH}
